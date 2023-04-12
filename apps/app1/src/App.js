@@ -3,6 +3,8 @@ import "./App.css";
 import something from "some";
 
 function App() {
+	// env variables
+
 	return (
 		<div className="App">
 			<header className="App-header">

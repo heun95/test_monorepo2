@@ -1,5 +1,5 @@
-name: 'dev-check-changed-packages'
-on: 
+name: "dev-check-changed-packages"
+on:
   push:
     branches: [dev]
 
@@ -20,10 +20,12 @@ jobs:
           workspace: app1
           from: HEAD^1 # Check for changes since previous commit (feel free to put a branch name instead)
 
-      - name: call-dev-app1-build
+      - name: call dev-app1 workflow
         if: steps.changedAction1.outputs.changed == 'true' # Check output if it changed or not (returns a boolean)
-        uses: ./.github/workflows/dev-app1.yml
-        
+        uses: ./
+        with:
+          workflow: dev-app1.yml
+
       - name: app2 changed in last commit?
         id: changedAction2
         uses: Trampoline-CX/action-turbo-changed@v1

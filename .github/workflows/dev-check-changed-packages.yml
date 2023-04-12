@@ -30,7 +30,8 @@ jobs:
       - name: Validate Action2 Output
         if: steps.changedAction2.outputs.changed == 'true' # Check output if it changed or not (returns a boolean)
         run: echo 'app2 changed!'
-        
+ 
   call_dev-app1_workflow:
-      if: steps.changedAction1.outputs.changed == 'true' # Check output if it changed or not (returns a boolean)
-      uses: ./.github/workflows/dev-app1.yml
+    needs: build
+    if: need.build.changedAction1.outputs.changed == 'true' # Check output if it changed or not (returns a boolean)
+    uses: ./.github/workflows/dev-app1.yml

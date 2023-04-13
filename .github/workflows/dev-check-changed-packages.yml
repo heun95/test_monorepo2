@@ -4,7 +4,7 @@ on:
     branches: [dev]
 
 jobs:
-  build:
+  check:
     runs-on: ubuntu-latest
 
     steps:
@@ -32,6 +32,6 @@ jobs:
         run: echo 'app2 changed!'
  
   call_dev-app1_workflow:
-    needs: build
-    if: need.build.changedAction1.outputs.changed == 'true' # Check output if it changed or not (returns a boolean)
-    uses: ./.github/workflows/dev-app1.yml
+    needs: [check]
+    if: need.check # Check output if it changed or not (returns a boolean)
+    runs-on: echo need.check

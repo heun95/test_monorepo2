@@ -1,2 +1,2 @@
-const something = 'something'
+const something = 'something changed'
 export default something

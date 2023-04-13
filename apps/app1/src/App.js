@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
+import { Button2 } from "ui2";
 
 function App() {
 	return (
@@ -17,6 +18,7 @@ function App() {
 				>
 					{process.env.REACT_APP_APP1}
 				</a>
+				<Button2 />
 			</header>
 		</div>
 	);

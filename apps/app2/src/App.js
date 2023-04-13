@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
 import { Button } from "ui";
+import { Button2 } from "ui2";
 import "./App.css";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
 					{process.env.REACT_APP_APP2}
 				</a>
 				<Button />
+				<Button2 />
 			</header>
 		</div>
 	);

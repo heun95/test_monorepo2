@@ -1,2 +1,2 @@
 import * as React from "react";
-export * from "./Button2";
+export * from "./Button";

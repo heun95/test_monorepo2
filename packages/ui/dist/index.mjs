@@ -1,8 +1,8 @@
-// src/Button2.tsx
+// src/Button.tsx
 import { jsx } from "react/jsx-runtime";
-var Button2 = () => {
-  return /* @__PURE__ */ jsx("button", { children: "button  " });
+var Button = () => {
+  return /* @__PURE__ */ jsx("button", { children: "button changed " });
 };
 export {
-  Button2
+  Button
 };

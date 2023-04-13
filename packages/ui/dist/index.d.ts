@@ -1,3 +1,3 @@
-declare const Button2: () => JSX.Element;
+declare const Button: () => JSX.Element;
 
-export { Button2 };
+export { Button };
